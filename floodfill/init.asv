@@ -1,0 +1,10 @@
+%image=imread('bigspiral.png');
+%image=rgb2gray(image);
+image(2043:2053,2043:2053)
+image(image==137)=0;
+image(image~=0&image~=255)=144;
+list=(image==144);
+for i=1:4096
+    for j=1:4096
+        if (list(i,j)==1)
+            
